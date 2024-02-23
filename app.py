@@ -20,4 +20,8 @@ except (IndexError):
 for i in range(len(message_list)):
     if i < len(message_list) - 1: link_out += '%20' + message_list[i + 1]
     elif i == len(message_list): link_out += '%20' + message_list[i]
-    
+
+link_out += ')'
+
+if wapp_number != '' and message != '':
+    st.markdown(link_out,unsafe_allow_html=True)
